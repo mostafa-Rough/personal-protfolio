@@ -29,6 +29,7 @@ font-family:Poppins,"Rethink Sans", sans-serif;
         color: white !important;
     }
     .flex-row {
+        display: flex;
         flex-direction:column; /* Default: stack columns vertically */
     }
     .first-div {
@@ -37,20 +38,24 @@ font-family:Poppins,"Rethink Sans", sans-serif;
         margin-top: 20px;
     }
     .second-div {
-        order: 1; /* Move second div to the start */
+        order:1; /* Move second div to the start */
     }
-    main .container div .card .item
+    main .container .second-div .card .rotate-img
     {
      display:none !important;
     }
+    main .about .b-content .icon-git,
+    main .about .b-content .icon-js,
+    main .about .b-content .icon-vs{
+     display:none !important;
+
+
+
+ }
+
 }
 @media (min-width: 768px) 
 {
-
-    
-    
-        
-       
        .navbar-default
         {
    
@@ -60,13 +65,8 @@ font-family:Poppins,"Rethink Sans", sans-serif;
         backdrop-filter: blur(8px)!important;
         -webkit-backdrop-filter: blur(12px)!important; 
         }
-
-    
-      .container-fluid
+      .box 
        {
-
-        
-        
             height: 70px;
             display: flex;
             align-items: center;
@@ -90,41 +90,51 @@ font-family:Poppins,"Rethink Sans", sans-serif;
             background-color:red;
             border: none;
             outline: none;
-            font-weight: 400;
-            
+            font-weight: 400;  
         }   
         .flex-row 
         {
          flex-direction:row; /* Default: stack columns vertically */
         }
-}
+        main .container .second-div .card .rotate-img{
+            display: block;
+            position: absolute;
+            bottom: -80px;
+            left: -25px;
+            animation: rotate 15s linear infinite reverse;
 
+        }
+
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .retate {
+    animation: rotate 15s linear infinite reverse;
+  }
 .nav>li
 {
     gap: 20px;
     padding:0;
     font-weight: 500;
-    
-
 }
-
-
 .nav>li>.btn
 {
         padding: var(--padding, 2px 20px);
          border: none;
         line-height: 40px;
         border-radius: 20px;
-      color: white;
-      
+      color: white;    
 }
-
 .navbar-default .navbar-nav>.active>a
-
 {
 background-color:unset;
 color: white;
-
 }
 .navbar-default .navbar-nav>.active>a:hover
 {
@@ -135,7 +145,6 @@ background-color:unset;
  color: white;
 transition:all 1s ease;
 text-shadow: 2px 2px 3px#2d2336;
-
 }
 .nav>li>a 
 {
@@ -156,8 +165,7 @@ color: red;
 .navbar-default .navbar-toggle .icon-bar
 {
     background-color: white;
-    width: 38px;
-    
+    width: 38px; 
 }
 .navbar-default .navbar-toggle:hover
 {
@@ -173,16 +181,14 @@ background-color: #2d2336;
 {
 padding-left: 30px;
 }
-/* ///////////////////////////////////////////////////////// */
 main .content
 {
 min-height: 100vh;
-background-image: url(../img/bg2.png);
+background-image: url(../img/hero-bg.jpg);
 width: 100vw;
 background-repeat:no-repeat;
 background-position: center;
-padding-top:190px;
-
+padding-top:140px;
 }
 main .content .container p
 {
@@ -209,12 +215,10 @@ main .container p
 {
     text-shadow: 2px 2px 3px#2d2336;
     font-size: 1.1em;
-
 }
 
 main .container .btn
 {
-       
         border: none;
         height:45px;
         width: 100px;
@@ -225,14 +229,13 @@ main .container .btn
         outline: none;
         border: none;
         background-color: #2d2336;
-        font-weight: 500;
-      
+        font-weight: 500;    
 }
 main .container .btn:hover
 {
     background-color:red;
 }
-main .container div a
+main .container .first-div a
 {
     color:#2d2336;
     font-size: 1.2em;
@@ -242,111 +245,97 @@ main .container div a
     text-decoration: none;
     
 }
-main .container div .card
-,main .container div img
-{
-    height:70%;
-    width:70%;
-    border-radius: 8px;
-    margin:  30px auto 0 auto;
-    position: relative;
-    box-shadow: 2px 2px 3px#2d2336;
-}
-main .container div img
-{
-    height:100%;
-    width:100%;   
-}
-main .container div .card .item1
-{
-    top:-30px;
-    right:-30px;
-    width:70px!important;
 
-}
-main .container div .card .item2
+main .container .second-div .card
 {
-
-    top:10px;
-    left:-100px;
-    color: #2d2336;
-    font-size:12px;
+    height: 100%;
+    width:100%;
+    border-radius: 4px;
+    position: relative; 
 }
-main .container div .card .item2 span
-{
-    display: inline-block;
-    color: red;
-    font-size: 4em;
-    font-weight: 400;
+main .container .second-div .card .personal-img{
+    display: block;
+    margin: auto;
+   height: 100%;
+   width: 80%;
+   border-radius: 4px;
 }
-main .container div .card .item1 p
-,main .container div .card .item2 p
-,main .container div .card .item3 p
-{
-        color:#2d2336;
-        text-shadow: none;
-        line-height: 20px;
-        max-width:70%;
-        font-weight: 500;
-        text-align: center;
-        font-size: 1.1em;
-        padding-top: 5px;
-
-}
-main .container div .card .item3
-{
-    bottom:-15px;
-    right:-60px;
-    width: 250px!important;
-}
-main .container div .card .item
-{
-    height:100px;
-    width:100px;
-    background-size:contain;
-    position:absolute;
-    background-color: white;
-    width: 150px;
-    height: 70px;
-    border-radius: 5px;
-    display: flex;
-    align-items:center;
-    justify-content:center;   
-    box-shadow: 1px 1px 4px 1px #2d2336; 
-}
-
-main .container div .card .item .element1
-,main .container div .card .item .element2
-{
-    background-image: url(../img/stamp.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    width:40px;
-    height:40px;
-    background-size: contain;
-
-}
-main .container div .card .item .element2
-{
- background-image: url(../img/code1.png);
-}
-.flex-row {
-    display: flex;
-}
-/* /////////////////////////////////////////////////// */
-main .about
-{
+main .about{
+    padding-top: 40px;
+    width: 100vw;
     background-color: #2d2336;
-    height: 100vh;
 }
-main .about .item1
-{
-margin-top: 100px;
-background-image: url(../img/main.jpg);
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;
-height:300px;
-width:80%;
+main .about .item-main{
+     position: relative;
 }
+main .about .b-content,
+main .about .b-text{
+    width: 90%;
+    /* height:70vh; i need to remove this after setting the main stuctrer */
+    margin:20px auto;
+}
+main .about .b-content img{
+    height:100%;
+    width: 100%;
+    border-radius:9px;
+    /* box-shadow: 1px 1px 1px 5px #2d2336; */
+}
+main .about .b-content .icon-git,
+main .about .b-content .icon-js,
+main .about .b-content .icon-vs{
+    height:100px;
+    width: 100px;
+    border-radius:13px;
+    display: flex ;
+    justify-content: center  ;
+    align-items: center;
+}
+main .about .b-content .icon-git{
+    position: absolute;
+    left: 33px;
+    top: 160px;
+    background-color: rgb(218, 86, 19);
+}
+main .about .b-content .icon-vs{
+    position: absolute;
+    left:550px;
+    top:100px;
+    background-color: rgb(60, 126, 189);
+}
+main .about .b-content .icon-js{
+    position: absolute;
+    left: 246px;
+    top: -53px;
+    background-color: rgb(231, 231, 20);
+}
+main .about .b-content .item img{
+    height: 50%;
+    width: 50%;
+}
+main .about .b-text .p-1{
+    text-transform: capitalize;
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #2d2336;
+}
+main .about .b-text h2{
+font-size: 2.5em;
+line-height: 30px;
+padding:0px 15px 30px 15px;
+text-shadow: 1px 1px 2px #d12b0e;
+color: white;
+font-weight: 200;
+
+}
+main .about .b-text .p-2{
+    /* text-align: center; */
+    font-size: 1.2em;
+    line-height:30px;
+    color: white;
+    text-shadow: 1px 1px 2px #2d2336;
+    font-weight: 200;
+    padding: 0 10px;
+}
+
