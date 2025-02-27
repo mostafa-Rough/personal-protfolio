@@ -3,6 +3,12 @@
 {
 font-family:Poppins,"Rethink Sans", sans-serif;
 }
+body{
+    overflow-x:hidden;
+}
+.row{
+    margin: auto !important;
+}
 @media (max-width: 767px) 
 {
     .navbar
@@ -260,25 +266,28 @@ main .container .second-div .card .personal-img{
    width: 80%;
    border-radius: 4px;
 }
+
+
+
 main .about{
-    padding-top: 40px;
+    padding-top: 20px;
     width: 100vw;
     background-color: #2d2336;
+    height: fit-content;
 }
+
 main .about .item-main{
      position: relative;
 }
 main .about .b-content,
 main .about .b-text{
     width: 90%;
-    /* height:70vh; i need to remove this after setting the main stuctrer */
     margin:20px auto;
 }
 main .about .b-content img{
     height:100%;
     width: 100%;
     border-radius:9px;
-    /* box-shadow: 1px 1px 1px 5px #2d2336; */
 }
 main .about .b-content .icon-git,
 main .about .b-content .icon-js,
@@ -330,7 +339,6 @@ font-weight: 200;
 
 }
 main .about .b-text .p-2{
-    /* text-align: center; */
     font-size: 1.2em;
     line-height:30px;
     color: white;
@@ -338,4 +346,82 @@ main .about .b-text .p-2{
     font-weight: 200;
     padding: 0 10px;
 }
+/*            ...................................................... */
+.portfolio,
+.skills{
 
+    padding:20px;
+    width: 100vw;
+    height:fit-content;
+    background-color:#2d2336;
+}
+.title-box .box-subtitle,
+.title-box .box-title,
+.title-box .box-descriptive{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    
+}
+.title-box .box-subtitle{
+    color: red;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.title-box .box-title{
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 20px auto;
+    text-shadow: 1px 1px 2px #d12b0e;
+    
+}
+.title-box .box-descriptive{
+    font-size:0.9em;
+    color: white;
+    font-weight: 300;
+}
+
+.portfolio .col-md-8{
+    height:70vh;
+    background-color: blue;
+    background-image: url('../img/2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* margin-bottom: 20px 0px 0px 20px; */
+    border-radius: 14px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    /* padding-left: 20px; */
+}
+.portfolio .card {
+    margin-left:10%;
+}
+.portfolio .card .card-subtitle{
+    color: red;
+    text-decoration:underline;
+    font-size: 1.3em;
+    font-weight:500;
+    margin-bottom: 10px;
+    /* margin-left: 20px; */
+    text-shadow: 0px 1px 3px #464646;
+    
+}
+.portfolio .card .link{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    font-weight: 200;
+    text-shadow: 1px 1px 2px #d12b0e;
+
+}
+.portfolio .card .link span{
+    color: red;
+    display: inline-block;
+    margin-left:10px;
+    font-size:1.1em;
+}
