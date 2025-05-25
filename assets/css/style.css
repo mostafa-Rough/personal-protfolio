@@ -2,6 +2,8 @@
 *
 {
 font-family:Poppins,"Rethink Sans", sans-serif;
+scroll-behavior: smooth;
+
 }
 body{
     overflow-x:hidden;
@@ -28,7 +30,10 @@ body{
     }
     .navbar-brand 
     {
-        color:red !important;
+        color:#ccc6c4 !important;
+        /* font-size:1.4em; */
+        font-weight: 400;
+
     }
     .navbar-brand span
     {
@@ -49,16 +54,19 @@ body{
     main .container .second-div .card .rotate-img
     {
      display:none !important;
-    }
+    } 
     main .about .b-content .icon-git,
     main .about .b-content .icon-js,
     main .about .b-content .icon-vs{
      display:none !important;
-
-
-
- }
-
+    }
+    .contact .contact-box{
+        flex-direction:column;
+        width:100%;
+     }
+     .skills .progress-box{
+        width:100%;
+     }
 }
 @media (min-width: 768px) 
 {
@@ -83,7 +91,7 @@ body{
             font-size: 1.8em;
             font-weight: 500;
             text-shadow: 1px 0px 2px black;
-            color:#2d2336!important;
+            color:#d12b0e!important;
             text-shadow: 1px 0px 2px black;
          }
          .nav>li>.btn
@@ -110,6 +118,16 @@ body{
             animation: rotate 15s linear infinite reverse;
 
         }
+        /* .contact form{
+            width:70%;
+        } */
+         .contact .contact-box{
+            flex-direction: row;
+            width:80%;
+         }
+         .skills .progress-box{
+            width:70%;
+         }
 
 }
 @keyframes rotate {
@@ -127,7 +145,7 @@ body{
 {
     gap: 20px;
     padding:0;
-    font-weight: 500;
+    font-weight:500;
 }
 .nav>li>.btn
 {
@@ -235,7 +253,10 @@ main .container .btn
         outline: none;
         border: none;
         background-color: #2d2336;
-        font-weight: 500;    
+        font-weight: 500;
+}
+main .container .box-about{
+    margin-bottom: 30px;   
 }
 main .container .btn:hover
 {
@@ -346,9 +367,10 @@ main .about .b-text .p-2{
     font-weight: 200;
     padding: 0 10px;
 }
-/*            ...................................................... */
 .portfolio,
-.skills{
+.skills,
+.contact,
+.blogs{
     padding:20px;
     width: 100vw;
     height:fit-content;
@@ -360,7 +382,7 @@ main .about .b-text .p-2{
     width: fit-content;
     margin: auto;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom:30px;
     
 }
 .title-box .box-subtitle{
@@ -373,31 +395,34 @@ main .about .b-text .p-2{
     font-size: 2em;
     font-weight: 600;
     margin: 20px auto;
-    text-shadow: 1px 1px 2px #d12b0e;
-    
+    text-shadow: 1px 1px 2px #d12b0e; 
 }
 .title-box .box-descriptive{
     font-size:0.9em;
     color: white;
     font-weight: 300;
 }
-
 .portfolio .col-md-8{
     height:70vh;
-    background-color: blue;
-    background-image: url('../img/2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    /* margin-bottom: 20px 0px 0px 20px; */
-    border-radius: 14px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    cursor:pointer;
-    /* padding-left: 20px; */
+    /* background-color: blue; */
+    margin-top:20px;
+    /* margin: auto; */
+
 }
 .portfolio .card {
-    margin-left:10%;
+    background-image: url('../img/project-1.png');
+    background-color: rgb(51, 179, 130);
+    height:100%;
+    width:100%;
+    cursor:pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 14px;
+    margin: auto;
+    padding: 150px 40px 29px 50px;
+
+
 }
 .portfolio .card .card-subtitle{
     color: red;
@@ -405,8 +430,7 @@ main .about .b-text .p-2{
     font-size: 1.3em;
     font-weight:500;
     margin-bottom: 10px;
-    text-shadow: 0px 1px 3px #464646;
-    
+    text-shadow: 0px 1px 3px #464646;  
 }
 .portfolio .card .link{
     display:flex;
@@ -416,7 +440,6 @@ main .about .b-text .p-2{
     margin-top: 10px;
     font-weight: 200;
     text-shadow: 1px 1px 2px #d12b0e;
-
 }
 .portfolio .card .link span{
     color: red;
@@ -424,10 +447,10 @@ main .about .b-text .p-2{
     margin-left:10px;
     font-size:1.1em;
 }
-/* code for skills */
 .skills .progress-box{
-    width: 90%;
     margin-top:30px;
+    margin:auto;
+    padding:5px;
 }
 .skills .progress-box .info{
 display: flex;
@@ -447,4 +470,41 @@ letter-spacing: 1px;
 .skills .progress-box .progress{
     border-radius: 10px;
     height:10px;
+}
+.contact-box{
+     background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom:20px;
+    flex-direction:row;
+    margin:auto;
+    gap:40px;
+    margin-bottom:50px;
+}
+.contact .item-box form{
+width:100%;
+}
+.contact .contact-input{
+    width:100%;
+    border: none;
+    border-radius:5px;
+    margin-bottom: 10px;
+    line-height: 35px;
+    background-color:transparent;
+    box-shadow: inset 0.5px 0px 10px 1px #2d2336;
+    padding:0px 10px;
+}
+.contact .contact-input:focus,
+.contact .contact-input:valid{
+    border:none!important;
+}
+.contact .contact-input::placeholder{
+    color:#2d2336;
+    text-shadow: 1px 1px 2px #ccc6c4;
+}
+.contact .contact-btn{
+    background-color: #2d2336;
+    color: white;
 }
